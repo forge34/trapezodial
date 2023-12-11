@@ -2,7 +2,6 @@
 #include <vector>
 #include "fparser.hh"
 
-
 using namespace std;
 
 double trapezoidal(string fn,double lower, double upper, double n) {
@@ -11,7 +10,6 @@ double trapezoidal(string fn,double lower, double upper, double n) {
     function.Parse(fn, "x");
     double x = lower;
     double h = (upper - lower) / n;
-
 
     double result = 0;
 
