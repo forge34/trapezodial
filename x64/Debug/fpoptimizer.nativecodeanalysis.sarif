@@ -1,0 +1,995 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "runs": [
+    {
+      "results": [
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Mohamed/source/repos/trapz/trapz/fpoptimizer.cc"
+                },
+                "region": {
+                  "startLine": 8809,
+                  "startColumn": 37,
+                  "endLine": 8809,
+                  "endColumn": 47
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "FPoptimizer_CodeTree::CodeTree<double>::GenerateFrom",
+                  "decoratedName": "?GenerateFrom@?$CodeTree@N@FPoptimizer_CodeTree@@QEAAXAEBUData@?$FunctionParserBase@N@@AEBV?$vector@V?$CodeTree@N@FPoptimizer_CodeTree@@V?$allocator@V?$CodeTree@N@FPoptimizer_CodeTree@@@std@@@std@@_N@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C6011",
+          "message": {
+            "text": "Dereferencing NULL pointer 'ByteCodePtr'. "
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Mohamed/source/repos/trapz/trapz/extrasrc/fp_opcode_add.inc"
+                },
+                "region": {
+                  "startLine": 2655,
+                  "startColumn": 6
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "FPoptimizer_ByteCode::ByteCodeSynth<double>::AddFunctionOpcode",
+                  "decoratedName": "?AddFunctionOpcode@?$ByteCodeSynth@N@FPoptimizer_ByteCode@@QEAAXIU?$Specializer@$0A@$0A@@12@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Mohamed/source/repos/trapz/trapz/fpoptimizer.cc"
+                          },
+                          "region": {
+                            "startLine": 2436,
+                            "startColumn": 15
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Mohamed/source/repos/trapz/trapz/extrasrc/fp_opcode_add.inc"
+                          },
+                          "region": {
+                            "startLine": 334,
+                            "startColumn": 4
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Mohamed/source/repos/trapz/trapz/extrasrc/fp_opcode_add.inc"
+                          },
+                          "region": {
+                            "startLine": 334,
+                            "startColumn": 10
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Mohamed/source/repos/trapz/trapz/extrasrc/fp_opcode_add.inc"
+                          },
+                          "region": {
+                            "startLine": 336,
+                            "startColumn": 1
+                          }
+                        },
+                        "message": {
+                          "text": "'ByteCodePtr' may be NULL"
+                        }
+                      },
+                      "kinds": [
+                        "declaration"
+                      ],
+                      "importance": "essential"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Mohamed/source/repos/trapz/trapz/extrasrc/fp_opcode_add.inc"
+                          },
+                          "region": {
+                            "startLine": 2649,
+                            "startColumn": 1
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Mohamed/source/repos/trapz/trapz/extrasrc/fp_opcode_add.inc"
+                          },
+                          "region": {
+                            "startLine": 2650,
+                            "startColumn": 1
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Mohamed/source/repos/trapz/trapz/extrasrc/fp_opcode_add.inc"
+                          },
+                          "region": {
+                            "startLine": 2651,
+                            "startColumn": 1
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Mohamed/source/repos/trapz/trapz/extrasrc/fp_opcode_add.inc"
+                          },
+                          "region": {
+                            "startLine": 2652,
+                            "startColumn": 1
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Mohamed/source/repos/trapz/trapz/extrasrc/fp_opcode_add.inc"
+                          },
+                          "region": {
+                            "startLine": 2653,
+                            "startColumn": 1
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Mohamed/source/repos/trapz/trapz/extrasrc/fp_opcode_add.inc"
+                          },
+                          "region": {
+                            "startLine": 2654,
+                            "startColumn": 1
+                          }
+                        },
+                        "message": {
+                          "text": "Assume switch ( 'opcode' ) resolves to case cAbs: "
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Mohamed/source/repos/trapz/trapz/extrasrc/fp_opcode_add.inc"
+                          },
+                          "region": {
+                            "startLine": 2654,
+                            "startColumn": 19
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Mohamed/source/repos/trapz/trapz/extrasrc/fp_opcode_add.inc"
+                          },
+                          "region": {
+                            "startLine": 2655,
+                            "startColumn": 6
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Mohamed/source/repos/trapz/trapz/extrasrc/fp_opcode_add.inc"
+                          },
+                          "region": {
+                            "startLine": 2655,
+                            "startColumn": 6
+                          }
+                        },
+                        "message": {
+                          "text": "'ByteCodePtr' is dereferenced, but may still be NULL"
+                        }
+                      },
+                      "kinds": [
+                        "usage"
+                      ],
+                      "importance": "essential"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C6011",
+          "message": {
+            "text": "Dereferencing NULL pointer 'ImmedPtr'. "
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Mohamed/source/repos/trapz/trapz/extrasrc/fp_opcode_add.inc"
+                },
+                "region": {
+                  "startLine": 2656,
+                  "startColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "FPoptimizer_ByteCode::ByteCodeSynth<double>::AddFunctionOpcode",
+                  "decoratedName": "?AddFunctionOpcode@?$ByteCodeSynth@N@FPoptimizer_ByteCode@@QEAAXIU?$Specializer@$0A@$0A@@12@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Mohamed/source/repos/trapz/trapz/fpoptimizer.cc"
+                          },
+                          "region": {
+                            "startLine": 2436,
+                            "startColumn": 15
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Mohamed/source/repos/trapz/trapz/extrasrc/fp_opcode_add.inc"
+                          },
+                          "region": {
+                            "startLine": 334,
+                            "startColumn": 4
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Mohamed/source/repos/trapz/trapz/extrasrc/fp_opcode_add.inc"
+                          },
+                          "region": {
+                            "startLine": 334,
+                            "startColumn": 10
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Mohamed/source/repos/trapz/trapz/extrasrc/fp_opcode_add.inc"
+                          },
+                          "region": {
+                            "startLine": 336,
+                            "startColumn": 1
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Mohamed/source/repos/trapz/trapz/extrasrc/fp_opcode_add.inc"
+                          },
+                          "region": {
+                            "startLine": 2649,
+                            "startColumn": 1
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Mohamed/source/repos/trapz/trapz/extrasrc/fp_opcode_add.inc"
+                          },
+                          "region": {
+                            "startLine": 2650,
+                            "startColumn": 1
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Mohamed/source/repos/trapz/trapz/extrasrc/fp_opcode_add.inc"
+                          },
+                          "region": {
+                            "startLine": 2651,
+                            "startColumn": 1
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Mohamed/source/repos/trapz/trapz/extrasrc/fp_opcode_add.inc"
+                          },
+                          "region": {
+                            "startLine": 2652,
+                            "startColumn": 1
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Mohamed/source/repos/trapz/trapz/extrasrc/fp_opcode_add.inc"
+                          },
+                          "region": {
+                            "startLine": 2653,
+                            "startColumn": 1
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Mohamed/source/repos/trapz/trapz/extrasrc/fp_opcode_add.inc"
+                          },
+                          "region": {
+                            "startLine": 2654,
+                            "startColumn": 1
+                          }
+                        },
+                        "message": {
+                          "text": "Assume switch ( 'opcode' ) resolves to case cAbs: "
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Mohamed/source/repos/trapz/trapz/extrasrc/fp_opcode_add.inc"
+                          },
+                          "region": {
+                            "startLine": 2654,
+                            "startColumn": 19
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Mohamed/source/repos/trapz/trapz/extrasrc/fp_opcode_add.inc"
+                          },
+                          "region": {
+                            "startLine": 2655,
+                            "startColumn": 6
+                          }
+                        },
+                        "message": {
+                          "text": "Assume switch ( 'ByteCodePtr[0]' ) resolves to case cNeg: "
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Mohamed/source/repos/trapz/trapz/extrasrc/fp_opcode_add.inc"
+                          },
+                          "region": {
+                            "startLine": 2656,
+                            "startColumn": 1
+                          }
+                        },
+                        "message": {
+                          "text": "Go to Lab"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Mohamed/source/repos/trapz/trapz/extrasrc/fp_opcode_add.inc"
+                          },
+                          "region": {
+                            "startLine": 4571,
+                            "startColumn": 1
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Mohamed/source/repos/trapz/trapz/extrasrc/fp_opcode_add.inc"
+                          },
+                          "region": {
+                            "startLine": 4571,
+                            "startColumn": 5
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Mohamed/source/repos/trapz/trapz/extrasrc/fp_opcode_add.inc"
+                          },
+                          "region": {
+                            "startLine": 4572,
+                            "startColumn": 1
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Mohamed/source/repos/trapz/trapz/extrasrc/fp_opcode_add.inc"
+                          },
+                          "region": {
+                            "startLine": 4572,
+                            "startColumn": 14
+                          }
+                        },
+                        "message": {
+                          "text": "Go to TailCall_cAbs"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Mohamed/source/repos/trapz/trapz/extrasrc/fp_opcode_add.inc"
+                          },
+                          "region": {
+                            "startLine": 2654,
+                            "startColumn": 5
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Mohamed/source/repos/trapz/trapz/extrasrc/fp_opcode_add.inc"
+                          },
+                          "region": {
+                            "startLine": 2654,
+                            "startColumn": 19
+                          }
+                        },
+                        "message": {
+                          "text": "Skip this branch, (assume '!ByteCodePtr' is false)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Mohamed/source/repos/trapz/trapz/extrasrc/fp_opcode_add.inc"
+                          },
+                          "region": {
+                            "startLine": 2655,
+                            "startColumn": 6
+                          }
+                        },
+                        "message": {
+                          "text": "Assume switch ( 'ByteCodePtr[0]' ) resolves to case cNeg: "
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Mohamed/source/repos/trapz/trapz/extrasrc/fp_opcode_add.inc"
+                          },
+                          "region": {
+                            "startLine": 2656,
+                            "startColumn": 1
+                          }
+                        },
+                        "message": {
+                          "text": "Go to Lab"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Mohamed/source/repos/trapz/trapz/extrasrc/fp_opcode_add.inc"
+                          },
+                          "region": {
+                            "startLine": 4571,
+                            "startColumn": 1
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Mohamed/source/repos/trapz/trapz/extrasrc/fp_opcode_add.inc"
+                          },
+                          "region": {
+                            "startLine": 4571,
+                            "startColumn": 5
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Mohamed/source/repos/trapz/trapz/extrasrc/fp_opcode_add.inc"
+                          },
+                          "region": {
+                            "startLine": 4572,
+                            "startColumn": 1
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Mohamed/source/repos/trapz/trapz/extrasrc/fp_opcode_add.inc"
+                          },
+                          "region": {
+                            "startLine": 4572,
+                            "startColumn": 14
+                          }
+                        },
+                        "message": {
+                          "text": "Go to TailCall_cAbs"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Mohamed/source/repos/trapz/trapz/extrasrc/fp_opcode_add.inc"
+                          },
+                          "region": {
+                            "startLine": 2654,
+                            "startColumn": 5
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Mohamed/source/repos/trapz/trapz/extrasrc/fp_opcode_add.inc"
+                          },
+                          "region": {
+                            "startLine": 2654,
+                            "startColumn": 19
+                          }
+                        },
+                        "message": {
+                          "text": "Skip this branch, (assume '!ByteCodePtr' is false)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Mohamed/source/repos/trapz/trapz/extrasrc/fp_opcode_add.inc"
+                          },
+                          "region": {
+                            "startLine": 2655,
+                            "startColumn": 6
+                          }
+                        },
+                        "message": {
+                          "text": "Assume switch ( 'ByteCodePtr[0]' ) resolves to case cImmed: "
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Mohamed/source/repos/trapz/trapz/extrasrc/fp_opcode_add.inc"
+                          },
+                          "region": {
+                            "startLine": 2656,
+                            "startColumn": 1
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Mohamed/source/repos/trapz/trapz/extrasrc/fp_opcode_add.inc"
+                          },
+                          "region": {
+                            "startLine": 2656,
+                            "startColumn": 1
+                          }
+                        },
+                        "message": {
+                          "text": "'ImmedPtr' is dereferenced, but may still be NULL"
+                        }
+                      },
+                      "kinds": [
+                        "usage"
+                      ],
+                      "importance": "essential"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Arithmetic overflow: Using operator '-' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '-' to avoid overflow (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Mohamed/source/repos/trapz/trapz/fpoptimizer.cc"
+                },
+                "region": {
+                  "startLine": 10636,
+                  "startColumn": 29,
+                  "endLine": 10636,
+                  "endColumn": 54
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "`anonymous-namespace'::IsOptimizableUsingPowi",
+                  "decoratedName": "??$IsOptimizableUsingPowi@N@?A0xc77f9d44@@YA_NJJ@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Arithmetic overflow: Using operator '<<' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '<<' to avoid overflow (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Mohamed/source/repos/trapz/trapz/fpoptimizer.cc"
+                },
+                "region": {
+                  "startLine": 8059,
+                  "startColumn": 59,
+                  "endLine": 8059,
+                  "endColumn": 63
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "FPoptimizer_CodeTree::ImmedHashGenerator<double>::MakeHash",
+                  "decoratedName": "?MakeHash@?$ImmedHashGenerator@N@FPoptimizer_CodeTree@@SAXAEAUfphash_t@FUNCTIONPARSERTYPES@@AEBN@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Mohamed/source/repos/trapz/trapz/fpoptimizer.cc"
+                },
+                "region": {
+                  "startLine": 1773,
+                  "startColumn": 1,
+                  "endLine": 1773,
+                  "endColumn": 4
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "FPoptimizer_Optimize::MatchInfo<double>::SaveOrTestRestHolder",
+                  "decoratedName": "?SaveOrTestRestHolder@?$MatchInfo@N@FPoptimizer_Optimize@@QEAA_NIAEBV?$vector@V?$CodeTree@N@FPoptimizer_CodeTree@@V?$allocator@V?$CodeTree@N@FPoptimizer_CodeTree@@@std@@@std@@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Mohamed/source/repos/trapz/trapz/fpoptimizer.cc"
+                },
+                "region": {
+                  "startLine": 1802,
+                  "startColumn": 1,
+                  "endLine": 1802,
+                  "endColumn": 4
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "FPoptimizer_Optimize::MatchInfo<double>::SaveOrTestParamHolder",
+                  "decoratedName": "?SaveOrTestParamHolder@?$MatchInfo@N@FPoptimizer_Optimize@@QEAA_NIAEBV?$CodeTree@N@FPoptimizer_CodeTree@@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Arithmetic overflow: Using operator '<<' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '<<' to avoid overflow (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Mohamed/source/repos/trapz/trapz/fpoptimizer.cc"
+                },
+                "region": {
+                  "startLine": 4241,
+                  "startColumn": 16,
+                  "endLine": 4241,
+                  "endColumn": 20
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "`anonymous-namespace'::fpEstimatePrecision",
+                  "decoratedName": "??$fpEstimatePrecision@N@?A0xc77f9d44@@YAHN@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis",
+          "version": "14.37.32825.0",
+          "informationUri": "https://aka.ms/cpp/ca"
+        }
+      },
+      "invocations": [
+        {
+          "executionSuccessful": true
+        }
+      ],
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///C:/Users/Mohamed/source/repos/trapz/trapz/fpoptimizer.cc"
+          },
+          "roles": [
+            "analysisTarget",
+            "resultFile"
+          ],
+          "hashes": {
+            "sha-256": "73d1be5267808588ae63adaefd20513ad0b2cd9b0e724dc50ed7642eb8dbe79c"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/Users/Mohamed/source/repos/trapz/trapz/extrasrc/fp_opcode_add.inc"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "sha-256": "1cef860ef3f22600d29f0b6411705e91c527e6d33e54905ce00e7378964f6bc1"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/mohamed/source/repos/trapz/trapz/fpconfig.hh"
+          },
+          "hashes": {
+            "sha-256": "7d2a6b9f235090ec41f9085f50d613f5b50ef3637104395322776c0c7653b1de"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/mohamed/desktop/fparser4.5.2/fparser.hh"
+          },
+          "hashes": {
+            "sha-256": "14c25f2781e090b872bf85a81c513501afbdecc2b315d0a81130654642ddfcd2"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/mohamed/source/repos/trapz/trapz/extrasrc/fptypes.hh"
+          },
+          "hashes": {
+            "sha-256": "768bcd90d7828db7538cdf04174e3a26240cfaf64a8303c10c7517eb05b5f4fb"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/mohamed/source/repos/trapz/trapz/extrasrc/fpaux.hh"
+          },
+          "hashes": {
+            "sha-256": "a82d0a3265a8b8b9bad10fc7de6b1ed930f8b08666e5b25ca7be6a61b0d4dffd"
+          }
+        }
+      ]
+    }
+  ]
+}

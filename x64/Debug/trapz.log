@@ -1,0 +1,2 @@
+﻿  trapz.cpp
+C:\Users\Mohamed\source\repos\trapz\trapz\trapz.cpp : fatal  error C1041: cannot open program database 'C:\Users\Mohamed\source\repos\trapz\trapz\x64\Debug\vc143.pdb'; if multiple CL.EXE write to the same .PDB file, please use /FS
