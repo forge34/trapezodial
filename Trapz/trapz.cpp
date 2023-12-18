@@ -4,7 +4,7 @@
 
 using namespace std;
 
-double trapezoidal(string fn,double lower, double upper, double n) {
+double trapezoidal(string fn, double lower, double upper, double n) {
     FunctionParser function;
 
     function.Parse(fn, "x");
@@ -13,12 +13,12 @@ double trapezoidal(string fn,double lower, double upper, double n) {
 
     double result = 0;
 
-    for (int i = 1; i < n ; i++) {
+    for (int i = 1; i < n; i++) {
         x += h;
         result += function.Eval(&x);
     }
 
-    result =  (function.Eval(&lower) + function.Eval(&upper) + (2 * result) ) * h/2;
+    result = (function.Eval(&lower) + function.Eval(&upper) + (2 * result)) * h / 2;
     return result;
 }
 
@@ -26,7 +26,7 @@ double trapezoidal(string fn,double lower, double upper, double n) {
 int main()
 {
     string s;
-    double lower=0, upper=0, n=0;
+    double lower = 0, upper = 0, n = 0;
 
     cout << "Enter function : ";
     cin >> s;
@@ -40,7 +40,12 @@ int main()
     cout << "Enter n: ";
     cin >> n;
 
+    if ( n < 0 ) {
+        cout << "Mathmatics Error !  \n";
+        return 1;
+
+    }
+
     cout << "Result is : " << trapezoidal(s, lower, upper, n) << endl;;
     return 0;
 }
-
