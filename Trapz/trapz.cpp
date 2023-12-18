@@ -19,6 +19,13 @@ double trapezoidal(string fn, double lower, double upper, double n) {
     }
 
     result = (function.Eval(&lower) + function.Eval(&upper) + (2 * result)) * h / 2;
+
+    int error = function.EvalError();
+
+    if (error > 0) {
+        throw std::invalid_argument("Invalid value for x");
+    }
+
     return result;
 }
 
@@ -46,6 +53,13 @@ int main()
 
     }
 
-    cout << "Result is : " << trapezoidal(s, lower, upper, n) << endl;;
+    try {
+        cout << "Result is : " << trapezoidal(s, lower, upper, n) << endl;
+
+    }
+   catch (const std::invalid_argument& e){
+       cout << e.what();
+    }
+
     return 0;
 }
