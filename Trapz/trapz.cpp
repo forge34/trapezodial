@@ -34,6 +34,7 @@ int main()
 {
     string s;
     double lower = 0, upper = 0, n = 0;
+    string hasDecimal;
 
     cout << "Enter function : ";
     cin >> s;
@@ -47,14 +48,21 @@ int main()
     cout << "Enter n: ";
     cin >> n;
 
-    if ( n < 0 ) {
-        cout << "Mathmatics Error !  \n";
-        return 1;
+    cout << "with decimal or no decimal (yes/no) : ";
+    cin >> hasDecimal;
 
+    if ( n < 0 ) {
+        cout << "N is less than zero";
+        return 0;
     }
 
     try {
-        cout << "Result is : " << trapezoidal(s, lower, upper, n) << endl;
+        if (hasDecimal == "no")
+            cout << "Result is : " << int(trapezoidal(s, lower, upper, n)) << endl;
+
+        else if (hasDecimal == "yes") {
+            cout << "Result is : " << trapezoidal(s, lower, upper, n) << endl;
+        }
 
     }
    catch (const std::invalid_argument& e){
